@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="dem_pirates.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Your CSS styles here */
+        /* ... */
+    </style>
+</head>
+<body>
+    <div id="title-container">
+        <!-- Clickable titles will be generated here -->
+    </div>
+    <div id="tile-container">
+        <!-- Tiles will be generated here -->
+    </div>
+    <script>
+        // Function to create a clickable title element
+        function createTitle(name, categories) {
+            const title = document.createElement('div');
+            title.classList.add('clickable-title');
+            title.textContent = name;
+
+            title.addEventListener('click', () => {
+                // Clear the tile container
+                tileContainer.innerHTML = '';
+
+                // Generate tiles for the selected categories
+                categories.forEach(category => {
+                    generateTiles(entries[category]);
+                });
+            });
+
+            return title;
+        }
+
+        // Function to generate tiles from entries data
+        function generateTiles(entries) {
+            for (const category in entries) {
+                for (const language in entries[category]) {
+                    for (const entryName in entries[category][language]) {
+                        const entry = entries[category][language][entryName];
+                        const tile = createTile(entry.name, entry.link, entry.nfo);
+                        tileContainer.appendChild(tile);
+                    }
+                }
+            }
+        }
+
+        // Function to create a tile element
+        function createTile(name, link, nfo) {
+            // (Same as in the previous examples)
+        }
+
+        // Load and parse the dem_pirates.js file
+        function loadEntries() {
+            const script = document.createElement('script');
+            script.src = 'dem_pirates.js';
+            script.type = 'text/javascript';
+
+            script.onload = function () {
+                // Generate the clickable titles when the script is loaded
+                for (const category in entries) {
+                    const title = createTitle(category, Object.keys(entries[category]));
+                    titleContainer.appendChild(title);
+                }
+
+                // Initialize the tile container
+                generateTiles(entries);
+            };
+
+            document.body.appendChild(script);
+        }
+
+        // Initialize the loading of entries
+        loadEntries();
+
+        // Get references to the containers
+        const titleContainer = document.getElementById('title-container');
+        const tileContainer = document.getElementById('tile-container');
+    </script>
+</body>
+</html>
