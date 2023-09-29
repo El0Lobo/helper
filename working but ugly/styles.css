@@ -1,0 +1,89 @@
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#entry-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#category-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+a.tile {
+    background: #2c2d2f linear-gradient(to left, #3B3D3F 50%, #2c2d2f 50%) repeat scroll 0 0 / 200% 100%;
+    color: #FFF;
+    display: inline-block;
+    margin: 3px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-position 0.1s ease 0s;
+    vertical-align: top;
+    width: 128px; /* Set the tile width */
+    height: 128px; /* Set the tile height */
+}
+
+a.tile:hover {
+    background-position: 100% 0;
+    color: #FFFFFF;
+    cursor: pointer;
+    transform: scale(0.97) perspective(400px);
+}
+
+a.tile.active {
+    background: #db3839;
+}
+
+.tile-content {
+    display: flex;
+    justify-content: center;
+}
+
+.tile > .name,
+.tile > .favicon {
+    padding-top: 10px;
+}
+
+.tile > .nfo {
+    font-size: 15px;
+    font-weight: bold;
+    display: none; /* Hide nfo by default */
+}
+
+.tile:hover > .name,
+.tile:hover > .favicon {
+    display: none; /* Hide icon and name on hover */
+    padding-top: 10px;
+}
+
+.tile:hover > .nfo {
+    display: flex; /* Display nfo on hover */
+    justify-content: center;
+}
