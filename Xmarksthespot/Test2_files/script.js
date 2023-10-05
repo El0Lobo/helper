@@ -210,6 +210,45 @@ function populateAndDisplaySelectedAppCards() {
   }
 }
 
+// Modify the createAppCard function to include the button holder and star button
+function createAppCard(name, link, nfo, iconURL) {
+  const appCard = document.createElement("div");
+  appCard.className = "app-card";
+
+  // Create the button holder
+  const buttonHolder = document.createElement("div");
+  buttonHolder.className = "buttonHolder";
+
+  // Create the star button
+  const starButton = document.createElement("a");
+  starButton.href = "#"; // Set the actual star button link here
+  starButton.className = "button Star";
+  buttonHolder.appendChild(starButton);
+
+  // Create the app icon and text
+  const appLink = document.createElement("span");
+  const appIcon = document.createElement("img");
+  appIcon.src = iconURL;
+  appIcon.alt = name;
+  appLink.appendChild(appIcon);
+  const appName = document.createTextNode(name);
+  appLink.appendChild(appName);
+  appLink.href = link;
+  appLink.target = "_blank";
+
+  // Create the app card subtext
+  const appSubtext = document.createElement("div");
+  appSubtext.className = "app-card__subtext";
+  appSubtext.textContent = nfo;
+
+  // Append elements to the app card
+  appCard.appendChild(buttonHolder);
+  appCard.appendChild(appLink);
+  appCard.appendChild(appSubtext);
+
+  return appCard;
+}
+
 // Create a menu link for each top-level category
 topLevelCategories.forEach((category) => {
   const topLevelCategoryLink = document.createElement("a");
@@ -257,6 +296,17 @@ window.addEventListener('load', () => {
 
 // Initial display of app cards based on selected categories (empty by default)
 populateAndDisplaySelectedAppCards();
+
+
+
+
+
+
+////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+//////////////// Floating Image working as inteded//////////////////
+
 
 
 const floatingImage = document.querySelector('.floating-image');

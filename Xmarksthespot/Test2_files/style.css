@@ -1070,29 +1070,22 @@ body.light-mode .video-bg:before {
 
 
 
-
-
-
-
-
 /*fucking Favorite button */
 
-.buttonHolder {
-  margin: 80px auto;
-  width: 400px;
-}
+
+
 .button {
-  float: left;
   position: relative;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
+  right: -230px;
 }
 
 .button:after {
   color: #e9e6e4;
   content: "";
   display: block;
-  font-size: 60px;
+  font-size: 30px;
   height: 30px;
   text-decoration: none;
   position: absolute;
