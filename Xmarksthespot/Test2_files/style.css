@@ -1070,3 +1070,47 @@ body.light-mode .video-bg:before {
 
 
 
+
+
+
+
+
+/*fucking Favorite button */
+
+.buttonHolder {
+  margin: 80px auto;
+  width: 400px;
+}
+.button {
+  float: left;
+  position: relative;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.button:after {
+  color: #e9e6e4;
+  content: "";
+  display: block;
+  font-size: 60px;
+  height: 30px;
+  text-decoration: none;
+  position: absolute;
+  width: 30px;
+}
+
+.Star:after {
+  content: "★";
+  left: 11px;
+  top: -2px;
+}
+
+.Star:hover:after {
+  color: #f1c232;
+}
+
+.Star:active:after {
+  color: #f1c232;
+}
+
+
