@@ -368,19 +368,19 @@ toggleButton.addEventListener('click', () => {
 
 //////toggle background
 
-// Select the button and video containers as before
-const toggleBackgroundButton = document.getElementById('toggleBackground');
+const BUTTON = document.getElementById('toggleBackground');
+const SYNC = document.querySelector('#sync');
 const videoContainer = document.querySelector('.video-container');
 const videoContainerNight = document.querySelector('.video-container-night');
-const sunImage = 'assets/pictures/Moon.png'; // Path to Sun image (relative to the HTML file)
-const moonImage = 'assets/pictures/Sun.png'; // Path to Moon image (relative to the HTML file)
+const sunImage = 'assets/pictures/Sun.png'; // Path to Sun image (relative to the HTML file)
+const moonImage = 'assets/pictures/Moon.png'; // Path to Moon image (relative to the HTML file)
 
 // Check the initial background state and set the button content accordingly
-let isDaytime = videoContainer.style.display !== 'none';
+let isDaytime = true;
 
 // Function to update the button content
 function updateButtonContent(isDaytime) {
-    toggleBackgroundButton.innerHTML = `
+    BUTTON.innerHTML = `
         <img src="${isDaytime ? sunImage : moonImage}" alt="${isDaytime ? 'Daytime' : 'Nighttime'}">
     `;
 }
@@ -389,7 +389,7 @@ function updateButtonContent(isDaytime) {
 updateButtonContent(isDaytime);
 
 // Add an event listener to toggle the background and update the button content
-toggleBackgroundButton.addEventListener('click', () => {
+BUTTON.addEventListener('click', () => {
     if (isDaytime) {
         videoContainer.style.display = 'none';
         videoContainerNight.style.display = 'block';
@@ -399,14 +399,27 @@ toggleBackgroundButton.addEventListener('click', () => {
         videoContainerNight.style.display = 'none';
         isDaytime = true;
     }
-    
+
     // Call the function to update the button content after the background toggle
     updateButtonContent(isDaytime);
 });
 
 // Trigger the initial click to set the initial state
-toggleBackgroundButton.click();
+BUTTON.click();
 
+// Add event listener for checkbox change
+SYNC.addEventListener('change', () => {
+    isDaytime = !SYNC.checked;
+    updateButtonContent(isDaytime);
+    
+    if (isDaytime) {
+        videoContainer.style.display = 'block';
+        videoContainerNight.style.display = 'none';
+    } else {
+        videoContainer.style.display = 'none';
+        videoContainerNight.style.display = 'block';
+    }
+});
 //////////////
 ////////////
 //////////////

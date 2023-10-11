@@ -1072,7 +1072,8 @@ body.light-mode .video-bg:before {
 
 /*fucking Favorite button */
 
-
+.buttonHolder {
+}
 
 .button {
   position: relative;

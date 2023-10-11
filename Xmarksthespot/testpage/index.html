@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>X - Marks the Spot</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pirata+One">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gwendolyn">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="dem_pirates.js"></script>
+</head>
+<body>
+
+<div class="video-bg">
+ <video width="320" height="240" autoplay loop muted>
+  <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+<div class="dark-light">
+    <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+   </div>
+<div class="app">
+ <div class="header">
+  <a class="header-link1" href="#">X </a>
+  <a class="header-link" href="#">- Marks the Spot</a>
+  <div class="header-menu">
+  </div>
+  <div class="search-bar">
+   <input type="text" placeholder="Search">
+  </div>
+    <button class="content-button status-button"id="customButton">S</button>
+    <div class="pop-up" id="popup"Settings>
+     <div class="pop-up__title">Website Settings
+      <svg class="close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+       <circle cx="12" cy="12" r="10" />
+       <path d="M15 9l-6 6M9 9l6 6" />
+      </svg>
+     </div>
+     <div class="pop-up__subtitle">Adjust your selections for advanced options as desired before continuing. <a href="#">Learn more</a></div>
+     <div class="checkbox-wrapper">
+      <input type="checkbox" id="check1" class="checkbox">
+      <label for="check1">Static Background</label>
+    </div>
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="check2" class="checkbox">
+      <label for="check2">Hide Buttons</label>
+     </div>
+     <div class="content-button-wrapper">
+      <button class="content-button status-button open close">Cancel</button>
+      <button class="content-button status-button">Continue</button>
+     </div>
+    </div>
+ </div>
+ <div class="wrapper">
+  <div class="left-side">
+   <div class="side-wrapper">
+    <div class="side-title">Oracle's Cove</div> 
+    <div class="side-menu">
+     <a href="#">
+      <img class="content-wrapper-img3" src="assets/pic/Ship.png" alt="">
+      Before you Sail
+     </a>
+     <a href="#">
+      <img class="content-wrapper-img3" src="assets/pic/faq.png" alt="">
+      FAQ
+     </a>
+    </div>
+   </div>
+   <div class="side-wrapper">
+    <div class="side-title">Personal Treasures</div>
+    <div class="side-menu">
+     <a href="#">
+      <img class="content-wrapper-img3" src="assets/pic/Favorites.png" alt="">
+      Favourites
+     </a>
+     <a href="#">
+      <img class="content-wrapper-img3" src="assets/pic/dig.png" alt="">
+      Self-Dredged
+     </a>
+    </div>
+   </div>
+   <div class="side-wrapper">
+    <div class="side-title">Streams</div>  <!-- Top Level Category -->
+    <div class="side-menu">
+     <a href="#">
+      <img class="content-wrapper-img3" src="assets/pic/English.png" alt="">
+      English                              <!-- Category -->
+      <a href="#">
+        <img class="content-wrapper-img3" src="assets/pic/Deutsch.png" alt="">
+        Deutsch                              <!-- Category -->
+     </a>
+    </div>
+
+   </div>
+  </div>
+  <div class="main-container">
+   <div class="main-header">
+    <a class="menu-link-main">Streams</a>
+    <div class="header-menu">
+     <a class="main-header-link is-active" href="#">English</a>  <!-- Category (active) -->
+     <a class="main-header-link" href="#">Deutsch</a>  <!-- Category -->
+    </div>
+   </div>
+   <div class="content-wrapper">
+    <div class="content-wrapper-header">
+     <div class="content-wrapper-context">
+      <div class="content-text"id="welcome"> 
+        <h2 style="text-decoration: underline;">Not so fast sailor! Do this first :</h2>
+        <h4>Use <a href="https://mozilla.org/firefox/new/" rel="nofollow" target="_blank">Firefox</a> + <a href="https://addons.mozilla.org/firefox/addon/ublock-origin/" rel="nofollow" target="_blank">uBlock Origin</a> with these <a href="https://a.imagem.app/o37ZWE.jpeg" rel="nofollow" target="_blank">optimized settings</a> (<em>Blocks advertisements &amp; malware</em>). </h4>
+        <h4>Change your DNS settings to one of <a href="https://www.privacyguides.org/en/dns/" rel="nofollow" target="_blank">these great choices</a> (<em>Bypasses website access limitations</em>).<h4>
+        <h4>Use a reputable torrent client with a kill switch, such as <a href="https://www.qbittorrent.org/" rel="nofollow" target="_blank">qBittorrent</a> (<em>Allows torrenting</em>).<h4>
+        <h4>Set up a VPN such as <a href="https://mullvad.net/" rel="nofollow" target="_blank">Mullvad</a> or <a href="https://protonvpn.com/" rel="nofollow" target="_blank">ProtonVPN</a> (<em>Changes IP address to hide identity</em>).
+            Bind your torrent client to the VPN (<em>Only allows torrenting when VPN is active</em>). <h4>         </div>
+          <h3 style="text-decoration: underline;">Disclaimer :</h3>
+        <h4>Torrenting is not recommended in Germany. If there is no other option be very careful and use the methods above.</h4>
+        <h5>On this Site, trustworthy links that were formerly safe may occasionally turn hazardous. Use your Brain!</h5>
+     </div>
+     <img class="content-wrapper-img" src="assets/pic/Oracle.png" alt="">
+    </div>
+
+      <div class="content-wrapper-header">
+       <div class="content-wrapper-context">
+        <div class="content-text"id="FAQ"> 
+          <h2>FAQ :</h2>
+          <br>
+          <h3>❔&nbsp;&nbsp;&nbsp; How can I tell if what I download is safe?</h3>
+          <ul>
+            <li>For files under 650MB, you can upload these to be scanned on <a href="https://www.virustotal.com//" rel="nofollow" target="_blank">VirusTotal</a> and then use <a href="https://www.reddit.com/r/Piracy/comments/n62da6/how_do_you_guys_know_if_a_virus_warning_is_a/gx4whhz/" rel="nofollow" target="_blank">this guide</a> to determine if any detections are most likely real or false positives.</li>
+            <br>
+          
+          <li>
+            Always check if the file you are downloading has the correct file-ending:
+            <br>
+            <ul>
+              <li>Video-Files: .mp4, .avi, .mov</li>
+              <li>Audio-Files: .mp3, .flac, .mp4, .opus</li>
+              <li>Text-Files: .pdf, .txt, .doc, .odt</li>
+            </ul>
+          </li>
+          <br>
+          <li>These are just the most common; the 'Use your Brain Doctrine' stays active.</li>
+          <br>
+          <li>
+            For PC-Games there are usually two possibilities:             
+            <ul>
+              <li>.Iso file</li>
+              <li>"preinstalled" folder</li>
+            </ul>
+          </li>
+        </ul>
+        <br>
+            <h3>❔&nbsp;&nbsp;&nbsp; Downloads, Torrents, & VPNs</h3>
+            <ul>
+              <li>Direct downloads are kept on the server from which you are retrieving the material. A secure browser like <a href="https://mozilla.org/firefox/new/" rel="nofollow" target="_blank">Firefox</a> + <a href="https://ublockorigin.com/" rel="nofollow" target="_blank">uBlock Origin</a> is all you need.</li>
+              <br>
+              <li>Torrents are peer-to-peer file sharing systems that need seeders (users who have previously downloaded the file). To begin torrenting files, a separate application is required.</li>
+              <br>
+              <li>Torrenting without proper protection may get you in trouble because your IP address is visible due to the nature of the protocol. Direct downloads generally don't require additional protection.</li>
+            </ul>
+            <ul>
+              <li>VPN is an abbreviation for <strong>virtual private network</strong>, which is a service that secures your internet connection and online privacy. It encrypts your data by concealing your IP address, allowing you to circumvent worldwide limitations on website access while still safeguarding your true identity.</li>
+              <br>
+              <li>When you connect to a VPN, your internet traffic is <a href="https://i.postimg.cc/N0TfQ7Q0/VPN-Visual-Explanation.png" rel="nofollow" target="_blank">routed through a VPN server</a> before being sent to your destination.</li>
+              <br>
+              <li>Free VPNs are more likely to collect data from you for marketing purposes, be too sluggish to use, or not enable torrent activity at all. It is advised to subscribe to a VPN service such as <a href="https://mullvad.net/" rel="nofollow" target="_blank">Mullvad</a> or <a href="https://protonvpn.com/" rel="nofollow" target="_blank">ProtonVPN</a>.</li>
+              </ul>
+            </ul>
+            <br>
+            <h3>❔&nbsp;&nbsp;&nbsp; Common Mistakes</h3>
+            <ul>
+              <li>"I can't open that "rar" file, what is it?"<br> A ".rar" file is a compressed archive file created using the RAR compression format. These files contain one or more files and are often used to reduce file sizes for storage and sharing. To open a ".rar" file, you typically need special software, such as <a href="https://www.win-rar.com/download.html?&L=0" rel="nofollow" target="_blank">Winrar</a>., that can extract the files from the archive.</li>
+              <br>
+              <li>"What do I do with this .Iso file?"<br>An ISO file is a complete copy of the contents of a physical disc, used for installing software, creating backups, and more. To use it, you can mount or extract it, create bootable media, or use it in virtual machines. If you use Windows 10 or later no additional Software is needed to open a .Iso.</li>
+              <br>
+              <li>"I installed that game correctly, but every time I start it it just opens Steam/Epic?"<br>That means you did not copy your cracked files to the right place, or did not copy them at all. <br> Check the readme, the files you downloaded or the page you downloaded from to find the cracked files.</li>
+              <br>           
+             </ul>
+            <ul>
+            </ul>
+            <br>
+            <h3>❔&nbsp;&nbsp;&nbsp; Anything else you need become the finest sailor possible!</h3>
+            <ul>
+              <li>It is imperative that you become familiar with the face of this <a href="https://en.wikipedia.org/wiki/Am%C3%A9lie" rel="nofollow">movie</a>.</li>
+              <li>Remove your music playlist and play this <a href="https://www.youtube.com/watch?v=72QAAOaYW2M" rel="nofollow">song</a> on repeat. </li>
+              <li>Watch this <a href="https://www.youtube.com/watch?v=vduP_LlJL7U" rel="nofollow">video</a>. Now be on your way you bilge-sucking, lily-livered, scabby sea bass.</li>
+              </ul>
+              <br>
+       </div>
+       </div>
+       <img class="content-wrapper-img4" src="assets/pic/pirate2.png" alt="">
+      </div>
+
+<!--     <div class="here">
+      <i id="ToggleIcon" class="fa fa-plus icon-container" onclick="addEntry()"></i>
+    </div> -->
+    <div class="here2">
+      <i id="ToggleIcon" class="fa fa-th icon-container"></i>
+    </div>
+
+    <div id="entriesList"></div>
+    <div id="entriesCards"></div>
+    <div class="content-section" id="List">
+     <div class="content-section-title">List:</div>
+     <ul>
+      <li class="list-website">    
+        <div class="website-list">
+          <img src="https://www.google.com/s2/favicons?sz=32&domain=https://fmoviesz.to/home" alt="https://fmoviesz.to/home"> <!-- Link -->
+          F-Movies   <!--name -->
+        </div>
+        <div class="button-wrapper">
+          <button class="nfo-button status-button open">.nfo</button>
+          <div class="nfo-content">Excellent Site with Intro Skip and Auto Play.</div>  <!--nfo -->
+        </div>
+        <div class="buttonHolder">
+          <button class="starbutton" id="starButton1"></button>
+        </div>
+      </li>
+      
+      <li class="list-website">
+        <div class="website-list">
+          <img src="https://www.google.com/s2/favicons?sz=32&domain=https://bflix.to/home" alt="https://bflix.to/home"> <!-- Link -->
+          B-Flix   <!--name -->
+        </div>
+        <div class="button-wrapper">
+          <button class="nfo-button status-button open">.nfo</button>
+          <div class="nfo-content">Fast Pretty Streaming Site.</div>   <!--nfo -->
+        </div>
+        <div class="buttonHolder">
+          <button class="starbutton"></button>
+        </div>
+      </li>
+
+      <li class="list-website">
+        <div class="website-list">
+          <img src="https://www.google.com/s2/favicons?sz=32&domain=https://www.mywatchseries.cyou/" alt="https://www.mywatchseries.cyou/">
+          Mywatchseries
+       </div>
+        <div class="button-wrapper">
+         <button class="nfo-button status-button open">.nfo</button>
+         <div class="nfo-content">Solid Streaming Side (many Videos are easy to Download)</div>
+        </div>
+        <div class="buttonHolder">
+          <button class="starbutton"></button>
+        </div>
+      </li>
+     </ul>
+    </div>
+    <div class="content-section" id="Tiles">
+     <div class="content-section-title">Tiles:</div>
+     <div class="apps-card">
+
+      <div class="app-card">
+       <span>
+        <img src="https://www.google.com/s2/favicons?sz=32&domain=https://fmoviesz.to/home" alt="https://fmoviesz.to/home"> <!-- Link -->
+        <div class="text-center">F-Movies</div>                                                                             <!--name -->
+        <div class="buttonHolder">
+          <button class="starbutton2"></button>
+        </div>
+       </span>
+       <div class="app-card__subtext">Excellent Site with Intro Skip and Auto Play.</div>                                   <!--nfo -->
+      </div>
+
+      <div class="app-card">
+       <span>
+        <img src="https://www.google.com/s2/favicons?sz=32&domain=https://bflix.to/home" alt="https://bflix.to/home">  <!-- Link -->
+        <div class="text-center">B-Flix</div>                                                                          <!--name -->
+        <div class="buttonHolder">
+          <button class="starbutton2"></button>
+        </div>
+       </span>
+       <div class="app-card__subtext">Fast Pretty Streaming Site.</div>                                                 <!--nfo -->
+      </div>
+      
+      <div class="app-card">
+       <span>
+        <img src="https://www.google.com/s2/favicons?sz=32&domain=https://www.mywatchseries.cyou/" alt="https://www.mywatchseries.cyou/">   <!-- Link -->
+        <div class="text-center">Mywatchseries</div>                                                                                        <!--name -->
+        <div class="buttonHolder">
+          <button class="starbutton2"></button>
+        </div>
+       </span>
+       <div class="app-card__subtext">Solid Streaming Side (many Videos are easy to Download)</div>                                          <!--nfo -->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="overlay-app"></div>
+</div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

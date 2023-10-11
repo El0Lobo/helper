@@ -1,10 +1,14 @@
 const entries = {
     "Stream": {
         "English": {
-            "Fmovies": {
+            "F-Movies": {
                 "link": "https://fmoviesz.to/home",
-                "nfo": "Excellent Site with Intro Skip and Auto Play"
+                "nfo": "Excellent Site with Intro Skip and Auto Play."
             },
+            "B-Flix": {
+                "link": "https://bflix.to/home",
+                "nfo": "Fast Pretty Streaming Site."
+            },    
             "MyWatchseries": {
                 "link": "https://www.mywatchseries.cyou/",
                 "nfo": "Solid Streaming Side (many Videos are easy to Download)"
